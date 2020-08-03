@@ -36,6 +36,7 @@ const toggleTodo = (id) => {
 
 // Render application todos based on filters
 const renderTodos = (todos, filters) => {
+    const todoEl = document.querySelector("#todos")
     let filterTodos = todos.filter((todo) => {
         const searchTextMatch = todo.text.toLowerCase().includes(filters.searchText.toLowerCase())
         const hideCompletedMatch = !filters.hideCompleted || !todo.completed
@@ -44,20 +45,20 @@ const renderTodos = (todos, filters) => {
 
     const incompleteTodos = filterTodos.filter((todo) => !todo.completed)
 
-    document.querySelector("#todos").innerHTML = ""
-    document.querySelector("#todos").appendChild(generateSummaryDOM(incompleteTodos))
+    todoEl.innerHTML = ""
+    todoEl.appendChild(generateSummaryDOM(incompleteTodos))
 
     if (filterTodos.length > 0) {
     filterTodos.forEach((todo) => {
         const newTodo = generateTodoDOM(todo)
-        document.querySelector("#todos").appendChild(newTodo)
+        todoEl.appendChild(newTodo)
     })
-  } else {
-      const messageEl = document.createElement("p")
-      messageEl.classList.add("empty-message")
-      messageEl.textContent = "No to-dos to show!"
-      document.querySelector("#todos").appendChild(messageEl)
-  }
+    } else {
+        const messageEl = document.createElement("p")
+        messageEl.classList.add("empty-message")
+        messageEl.textContent = "No to-dos to show!"
+        todoEl.appendChild(messageEl)
+    }
 }
 
 // Get the DOM elements for an individual note
