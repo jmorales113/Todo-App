@@ -47,10 +47,17 @@ const renderTodos = (todos, filters) => {
     document.querySelector("#todos").innerHTML = ""
     document.querySelector("#todos").appendChild(generateSummaryDOM(incompleteTodos))
 
+    if (filterTodos.length > 0) {
     filterTodos.forEach((todo) => {
         const newTodo = generateTodoDOM(todo)
         document.querySelector("#todos").appendChild(newTodo)
     })
+  } else {
+      const messageEl = document.createElement("p")
+      messageEl.classList.add("empty-message")
+      messageEl.textContent = "No to-dos to show!"
+      document.querySelector("#todos").appendChild(messageEl)
+  }
 }
 
 // Get the DOM elements for an individual note
