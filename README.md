@@ -2,4 +2,4 @@
 
 # Deployed Application
 
-https://reverent-hawking-c19a63.netlify.app
+https://jmorales-notes-app.netlify.app/
