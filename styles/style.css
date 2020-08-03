@@ -68,6 +68,7 @@ button {
 
 .input {
     border: none;
+    outline: none;
     font-size: 1.4rem;
     font-weight: 300;
     height: 3rem;
@@ -99,7 +100,7 @@ button {
     background: #43008a;
 }
 
-/* Note editor */
+/* Todo editor */
 
 .title-input {
     border: 1px solid #DEDFE0;
@@ -123,7 +124,7 @@ button {
     width: 100%;
 }
 
-/* Note List Item */
+/* Todo List Item */
 
 .list-item {
     text-decoration: none;
