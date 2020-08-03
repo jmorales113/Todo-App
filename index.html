@@ -3,19 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo</title>
+    <link href="/styles/style.css" rel="stylesheet">
+    <title>Todo App</title>
 </head>
+
 <body>
-    <h1>Todos</h1>
+    <div class="header">
+        <div class="container">
+            <h1 class="header_title">To-do App</h1>
+            <h2 class="header_subtitle">What do you need to do?</h2>
+        </div>
+    </div>
+
     <input id = "search-text" type = "text" placeholder = "Filter todos">
     <label>
         <input id = "hide-completed" type= "checkbox"> Hide completed
     </label>
+
+    
     <div id = "todos"></div>
     <form id = new-todo>
         <input type = "text" placeholder = "Something to do" name = "text">
         <button>Add Todo</button>
     </form>
+
      <script src="/scripts/uuidv4.js"></script>
     <script src="/scripts/todo-functions.js"></script>
     <script src ="scripts/todo-app.js"></script>
