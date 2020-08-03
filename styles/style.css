@@ -86,10 +86,6 @@ a {
     padding: 0 1.6rem;
 }
 
-.actions__container--spaced {
-    justify-content: space-between
-}
-
 /* Form Inputs */
 
 .input {
@@ -123,27 +119,6 @@ a {
 
 .button:hover {
     background: #5F3A87;
-}
-
-.button--secondary {
-    background: #888888;
-    border-bottom: 2px solid #717171;
-}
-
-.button--secondary:hover {
-    background: #6E6E6E;
-}
-
-.button--text {
-    background: none;
-    border: none;
-    color: #aaa;
-}
-
-.button--text:hover {
-    background: none;
-    color: white;
-    text-decoration: underline;
 }
 
 /* Note editor */
@@ -200,18 +175,6 @@ a {
 
 .list-item:hover {
     background: #3d3941;
-}
-
-.list-item__title {
-    font-size: 1.8rem;
-    margin-bottom: .4rem
-}
-
-.list-item__subtitle {
-    color: #666;
-    font-size: 1.4rem;
-    font-weight: 300;
-    font-style: italic;
 }
 
 .list-title {
