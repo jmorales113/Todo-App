@@ -110,3 +110,39 @@ a {
     margin-right: .4rem;
 }
 
+.button {
+    background: #7044a0;
+    border: none;
+    border-bottom: 2px solid #603a88;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 300;
+    padding: .8rem;
+    transition: background .3s ease, color .3s ease;
+}
+
+.button:hover {
+    background: #5F3A87;
+}
+
+.button--secondary {
+    background: #888888;
+    border-bottom: 2px solid #717171;
+}
+
+.button--secondary:hover {
+    background: #6E6E6E;
+}
+
+.button--text {
+    background: none;
+    border: none;
+    color: #aaa;
+}
+
+.button--text:hover {
+    background: none;
+    color: white;
+    text-decoration: underline;
+}
+
