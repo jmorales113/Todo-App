@@ -68,3 +68,45 @@ a {
   font-weight: 300;
 }
 
+/* Actions Bar */
+
+.actions {
+    background-color: #353239;
+    /* border-bottom: 1px solid #dedfe0; */
+    /* color: #333333; */
+    padding: 1rem
+}
+
+.actions_container {
+    align-items: center;
+    display: flex;
+    max-width: 60rem;
+    margin: 0 auto;
+    min-height: 3rem;
+    padding: 0 1.6rem;
+}
+
+.actions__container--spaced {
+    justify-content: space-between
+}
+
+/* Form Inputs */
+
+.input {
+    border: none;
+    font-size: 1.4rem;
+    font-weight: 300;
+    height: 3rem;
+    margin-right: 1.6rem;
+    padding: .4rem .8rem;
+}
+
+.checkbox {
+    display: flex;
+    align-items: baseline;
+}
+
+.checkbox > input {
+    margin-right: .4rem;
+}
+
