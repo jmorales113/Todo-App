@@ -97,6 +97,8 @@ const generateTodoDOM = (todo) => {
 // Get the DOM elements for list summary
 const generateSummaryDOM = (incompleteTodos) => {
     const summary = document.createElement("h2")
-    summary.textContent = `You have ${incompleteTodos.length} todos left`
+    const plural = incompleteTodos.length === 1 ? "" : "s"
+    summary.classList.add("list-title")
+    summary.textContent = `You have ${incompleteTodos.length} todo${plural} left`
     return summary
 }

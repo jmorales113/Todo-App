@@ -27,7 +27,7 @@ html {
 }
 
 body {
-  background: #2B292E;
+    background: #2B292E;
   color: #fafafa;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1.6rem;
@@ -134,7 +134,7 @@ a {
     background: #6E6E6E;
 }
 
-.button-text {
+.button--text {
     background: none;
     border: none;
     color: #aaa;
@@ -200,5 +200,25 @@ a {
 
 .list-item:hover {
     background: #3d3941;
+}
+
+.list-item__title {
+    font-size: 1.8rem;
+    margin-bottom: .4rem
+}
+
+.list-item__subtitle {
+    color: #666;
+    font-size: 1.4rem;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.list-title {
+    margin: 3.2rem 0 1.6rem;
+}
+
+.empty-message {
+    margin: 3.2rem 0;
 }
 
