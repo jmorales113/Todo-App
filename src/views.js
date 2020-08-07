@@ -1,43 +1,11 @@
-"use strict"
-
-// Fetch existing todos from localStorage
-const getSavedTodos = () => {
-    const todosJSON = localStorage.getItem("todos")
-
-    try {
-        return todosJSON ? JSON.parse(todosJSON) : []
-    } catch (e) {
-        return []
-    }
-}
-
-// save todos to LocalStorage
-const saveTodos = (todos) => {
-    localStorage.setItem("todos", JSON.stringify(todos))
-}
-
-// Remove Todo by id
-const removeTodo = (id) => {
-    const todoIndex = todos.findIndex((todo) => todo.id === id)
-    
-    if (todoIndex > -1) {
-        todos.splice(todoIndex, 1)
-    }
-}
-
-// Toggle completed value for a given todo
-const toggleTodo = (id) => {
-    const todo = todos.find((todo) => todo.id === id)
-
-    if (todo) {
-        todo.completed = !todo.completed
-    }
-}
+import { getTodos, toggleTodo, removeTodo } from "./todos.js"
+import { getFilters} from "./filters.js"
 
 // Render application todos based on filters
-const renderTodos = (todos, filters) => {
+const renderTodos = () => {
     const todoEl = document.querySelector("#todos")
-    let filterTodos = todos.filter((todo) => {
+    const filters = getFilters()
+    let filterTodos = getTodos().filter((todo) => {
         const searchTextMatch = todo.text.toLowerCase().includes(filters.searchText.toLowerCase())
         const hideCompletedMatch = !filters.hideCompleted || !todo.completed
         return searchTextMatch && hideCompletedMatch
@@ -75,8 +43,7 @@ const generateTodoDOM = (todo) => {
     containerEl.appendChild(checkbox)
     checkbox.addEventListener("change", () => {
         toggleTodo(todo.id)
-        saveTodos(todos)
-        renderTodos(todos, filters)
+        renderTodos()
     })
     
     // Setup up todo text
@@ -95,8 +62,7 @@ const generateTodoDOM = (todo) => {
 
     removeButton.addEventListener("click", () => {
         removeTodo(todo.id)
-        saveTodos(todos)
-        renderTodos(todos, filters)
+        renderTodos()
     })
     
     return todoEl
@@ -110,3 +76,5 @@ const generateSummaryDOM = (incompleteTodos) => {
     summary.textContent = `You have ${incompleteTodos.length} todo${plural} left`
     return summary
 }
+
+export { generateTodoDOM, renderTodos, generateSummaryDOM }
