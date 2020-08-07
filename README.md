@@ -2,5 +2,5 @@
 
 # Deployed Application
 
-https://jmorales-todo-app.netlify.app/
+https://jmorales-todo.netlify.app/
 
