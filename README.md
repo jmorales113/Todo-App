@@ -43,6 +43,13 @@ You can add todos and remove todos. Also, you can filter your todos alphabetical
 
 https://jmorales-todo.netlify.app/
 
+![Todo](https://user-images.githubusercontent.com/57970306/89601546-ad35fd00-d819-11ea-9f74-7ec2eeaf312e.PNG)
+![Todo-1](https://user-images.githubusercontent.com/57970306/89601548-ae672a00-d819-11ea-92b4-860ef4215971.PNG)
+![Todo-2](https://user-images.githubusercontent.com/57970306/89601551-b0c98400-d819-11ea-886b-599449cc2d8d.PNG)
+![Todo-3](https://user-images.githubusercontent.com/57970306/89601553-b2934780-d819-11ea-8c9a-c9f3efe8b879.PNG)
+![Notes-4](https://user-images.githubusercontent.com/57970306/89601556-b3c47480-d819-11ea-8043-5ac3e18a7a82.PNG)
+
+
 ## Contributor
 
 -  [Jorge Morales](https://github.com/jmorales113)
